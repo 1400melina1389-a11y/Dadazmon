@@ -938,6 +938,9 @@ img {
 
         transform: translateY(20px) !important;
 
-    }.login-btn {
-    margin-top: 100px;
+    }.content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
 }
