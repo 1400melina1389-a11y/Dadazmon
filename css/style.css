@@ -813,3 +813,32 @@ img {
     }
 
 }
+/* Final logo size and spacing */
+
+@media(max-width:480px){
+
+    .logo-box {
+
+        width:300px !important;
+        height:300px !important;
+
+        margin-bottom:70px !important;
+
+    }
+
+
+    .logo {
+
+        width:285px !important;
+        height:285px !important;
+
+    }
+
+
+    .title-box {
+
+        margin-bottom:55px !important;
+
+    }
+
+}
