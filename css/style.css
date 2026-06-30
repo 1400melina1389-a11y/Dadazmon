@@ -960,6 +960,8 @@ img {
     border: 5px solid red !important;
 }
 .logo {
-    width: 300px !important;
+    width: 230px !important;
     height: auto !important;
+    border: none !important;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.35));
 }
