@@ -938,8 +938,6 @@ img {
 
         transform: translateY(20px) !important;
 
-    }
-.login-btn {
-    transform: translateY(150px);
-}
+    }.login-btn {
+    margin-top: 100px;
 }
