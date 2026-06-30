@@ -785,7 +785,31 @@ img {
     -webkit-user-select:none;
 
 
-}
-body {
-    border: 15px solid red !important;
+}/* Final mobile logo adjustment */
+
+@media(max-width:480px){
+
+    .logo-box {
+
+        width:260px !important;
+        height:260px !important;
+
+    }
+
+
+    .logo {
+
+        width:250px !important;
+        height:250px !important;
+
+    }
+
+
+    .login-btn {
+
+        height:75px !important;
+        font-size:1.5rem !important;
+
+    }
+
 }
