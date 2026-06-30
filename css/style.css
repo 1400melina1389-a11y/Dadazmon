@@ -901,7 +901,7 @@ img {
 
     .welcome-page {
 
-        transform: translateY(-40px);
+        transform: translateY(-60px);
 
     }
 
@@ -911,14 +911,14 @@ img {
 
     .logo-box {
 
-        transform: translateY(-40px) !important;
+        transform: translateY(-60px) !important;
 
     }
 
 
     .action-box {
 
-        transform: translateY(-40px) !important;
+        transform: translateY(-60px) !important;
 
     }
 
