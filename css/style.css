@@ -930,3 +930,14 @@ img {
     }
 
 }
+/* Final logo position */
+
+@media(max-width:480px){
+
+    .logo-box {
+
+        transform: translateY(40px) !important;
+
+    }
+
+}
