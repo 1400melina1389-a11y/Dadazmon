@@ -959,3 +959,7 @@ img {
     width: 300px !important;
     border: 5px solid red !important;
 }
+.logo {
+    width: 300px !important;
+    height: auto !important;
+}
