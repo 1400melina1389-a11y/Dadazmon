@@ -939,5 +939,7 @@ img {
         transform: translateY(20px) !important;
 
     }
-
+.login-btn {
+    transform: translateY(100px);
+}
 }
