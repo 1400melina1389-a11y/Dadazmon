@@ -895,4 +895,14 @@ img {
 
     }
 
+}/* Move whole login content 20% upward */
+
+@media(max-width:480px){
+
+    .welcome-page {
+
+        transform: translateY(-20px);
+
+    }
+
 }
