@@ -905,4 +905,28 @@ img {
 
     }
 
+}/* Direct position adjustment */
+
+@media(max-width:480px){
+
+    .logo-box {
+
+        transform: translateY(-40px) !important;
+
+    }
+
+
+    .action-box {
+
+        transform: translateY(-40px) !important;
+
+    }
+
+
+    .app-subtitle {
+
+        transform: translateY(-40px) !important;
+
+    }
+
 }
