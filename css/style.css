@@ -955,3 +955,7 @@ img {
     height: auto;
     filter: drop-shadow(0 10px 20px rgba(0,0,0,0.35));
 }
+.logo {
+    width: 300px !important;
+    border: 5px solid red !important;
+}
