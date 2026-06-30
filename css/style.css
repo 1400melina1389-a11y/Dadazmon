@@ -949,11 +949,10 @@ img {
     margin-top: 25px;
     margin-bottom: 40px;
 }
-
 .logo {
-    width: 230px;
-    height: auto;
-    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.35));
+    width: 230px !important;
+    height: auto !important;
+    border: none !important;
 }
 .logo {
     width: 300px !important;
