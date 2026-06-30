@@ -1,107 +1,788 @@
-/* ==========================================
-   DadAzmon v1.0
-   طراحی اختصاصی صفحه ورود
-========================================== */
+/* =========================================
+   DadAzmon - Login Page
+   Version 1.0
+   Base Design
+========================================= */
 
-*{
+:root {
+
+    --bg-dark: #050B18;
+    --bg-blue: #102B52;
+
+    --gold: #D9A441;
+    --gold-light: #F5D27A;
+
+    --white: #FFFFFF;
+    --text-soft: #D8DEE9;
+
+    --glass: rgba(255,255,255,0.08);
+
+    --shadow:
+        0 20px 60px rgba(0,0,0,0.45);
+
+}
+
+
+/* حذف تنظیمات پیش فرض */
+
+* {
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
-html{
-    font-size:16px;
-    scroll-behavior:smooth;
+
+/* صفحه اصلی */
+
+html,
+body {
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+
 }
 
-body{
-    direction:rtl;
-    min-height:100dvh;
-    overflow:hidden;
-    font-family:Tahoma,sans-serif;
 
-    background:linear-gradient(
-        180deg,
-        #0B1F3A 0%,
-        #163D73 55%,
-        #081321 100%
+body {
+
+    direction:rtl;
+
+    font-family:
+    "Vazirmatn",
+    Tahoma,
+    Arial,
+    sans-serif;
+
+
+    background:
+    radial-gradient(
+        circle at top,
+        rgba(217,164,65,0.18),
+        transparent 35%
+    ),
+
+    linear-gradient(
+        160deg,
+        var(--bg-blue),
+        var(--bg-dark)
     );
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:#ffffff;
+
+    color:var(--white);
+
 }
 
-.welcome-page{
 
-    width:94%;
-    max-width:430px;
+/* ظرف اصلی صفحه */
 
-    height:90dvh;
+.welcome-page {
 
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-    align-items:center;
-
-    padding:5% 3%;
-}/* ==========================
-   لوگو
-========================== */
-
-.logo-box{
-    width:140px;
-    height:140px;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    margin-top:20px;
-}
-
-.logo{
     width:100%;
-    max-width:140px;
-    height:auto;
+    height:100dvh;
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    padding:
+
+    5vh
+
+    3vw;
+
+
+}
+
+
+/* نورهای پس زمینه */
+
+.welcome-page::before {
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+    height:320px;
+
+
+    background:
+
+    radial-gradient(
+        circle,
+        rgba(245,210,122,0.18),
+        transparent 70%
+    );
+
+
+    top:5%;
+    left:50%;
+
+
+    transform:
+    translateX(-50%);
+
+
+    filter:blur(20px);
+
+
+    z-index:0;
+
+}
+
+
+
+.background-glow {
+
+    position:absolute;
+
+    inset:0;
+
+
+    background:
+
+    radial-gradient(
+        circle at bottom,
+        rgba(16,43,82,0.7),
+        transparent 45%
+    );
+
+
+    z-index:0;
+
+}/* =========================================
+   Logo & Typography
+========================================= */
+
+
+/* محفظه لوگو */
+
+.logo-box {
+
+    position:relative;
+
+    z-index:2;
+
+
+    width:170px;
+
+    height:170px;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    margin-bottom:25px;
+
+
+    animation:
+    logoEnter 1.2s ease forwards;
+
+}
+
+
+
+/* هاله پشت لوگو */
+
+.logo-box::before {
+
+    content:"";
+
+    position:absolute;
+
+
+    width:190px;
+
+    height:190px;
+
+
+    border-radius:50%;
+
+
+    background:
+
+    radial-gradient(
+        circle,
+        rgba(245,210,122,0.25),
+        transparent 65%
+    );
+
+
+    filter:blur(12px);
+
+
+    z-index:-1;
+
+}
+
+
+
+/* تصویر لوگو */
+
+.logo {
+
+
+    width:160px;
+
+    height:160px;
+
 
     object-fit:contain;
+
+
+    filter:
+
+    drop-shadow(
+        0 10px 25px rgba(0,0,0,0.45)
+    );
+
+
 }
 
-/* ==========================
-   عنوان
-========================== */
 
-.app-title{
 
-    font-size:2.2rem;
-    font-weight:700;
+/* بخش عنوان */
 
-    color:#F4C542;
+.title-box {
+
+    position:relative;
+
+    z-index:2;
+
 
     text-align:center;
 
-    margin-top:10px;
+
+    margin-bottom:55px;
+
+
+}
+
+
+
+/* عنوان اصلی */
+
+.app-title {
+
+
+    font-size:
+
+    clamp(2.2rem,6vw,3rem);
+
+
+    font-weight:900;
+
 
     letter-spacing:1px;
+
+
+    color:var(--gold-light);
+
+
+
+    text-shadow:
+
+    0 0 15px rgba(245,210,122,0.35),
+
+
+    0 8px 20px rgba(0,0,0,0.5);
+
+
+
+    margin-bottom:15px;
+
+
+
 }
 
-/* ==========================
-   شعار
-========================== */
 
-.app-subtitle{
 
-    font-size:1rem;
+/* شعار */
 
-    color:#E5E7EB;
+.app-subtitle {
 
-    text-align:center;
-
-    line-height:1.9;
 
     max-width:320px;
 
+
+    line-height:2;
+
+
+    font-size:1rem;
+
+
+    color:var(--text-soft);
+
+
+
+    opacity:0.95;
+
+
+}
+
+
+
+/* ورود نرم عناصر */
+
+.logo-box,
+.title-box {
+
+
+    opacity:0;
+
+
+}
+
+
+
+.logo-box {
+
+    animation:
+    fadeUp 1s ease forwards;
+
+
+}
+
+
+
+.title-box {
+
+    animation:
+
+    fadeUp 1s ease .25s forwards;
+
+
+}/* =========================================
+   Login Button
+========================================= */
+
+
+.action-box {
+
+    position:relative;
+
+    z-index:2;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
     margin-top:10px;
+
+
+    animation:
+
+    fadeUp 1s ease .5s forwards;
+
+
+    opacity:0;
+
+}
+
+
+
+/* دکمه ورود */
+
+.login-btn {
+
+
+    width:
+
+    min(320px,85vw);
+
+
+
+    height:62px;
+
+
+
+    border:none;
+
+
+    border-radius:35px;
+
+
+
+    cursor:pointer;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        #F5D27A,
+
+        #C8922E
+
+    );
+
+
+
+    color:#101827;
+
+
+
+    font-size:1.15rem;
+
+
+
+    font-weight:900;
+
+
+
+    letter-spacing:.5px;
+
+
+
+    box-shadow:
+
+
+    0 15px 35px
+
+    rgba(0,0,0,.45),
+
+
+    0 0 25px
+
+    rgba(245,210,122,.25);
+
+
+
+    transition:
+
+    transform .25s ease,
+
+    box-shadow .25s ease;
+
+
+
+}
+
+
+
+/* حالت لمس */
+
+.login-btn:hover {
+
+
+    transform:
+
+    translateY(-3px);
+
+
+    box-shadow:
+
+
+    0 20px 45px
+
+    rgba(0,0,0,.55),
+
+
+    0 0 35px
+
+    rgba(245,210,122,.4);
+
+
+
+}
+
+
+
+/* حالت فشردن روی گوشی */
+
+.login-btn:active {
+
+
+    transform:
+
+    scale(.96);
+
+
+
+}
+
+
+
+/* افکت نور روی دکمه */
+
+.login-btn::before {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+
+}/* =========================================
+   Footer
+========================================= */
+
+.footer {
+
+    position:absolute;
+
+    bottom:20px;
+
+    width:100%;
+
+
+    text-align:center;
+
+
+    z-index:2;
+
+
+    color:rgba(255,255,255,.55);
+
+
+    font-size:.8rem;
+
+
+    letter-spacing:.3px;
+
+
+
+}
+
+
+
+/* =========================================
+   Animations
+========================================= */
+
+
+@keyframes fadeUp {
+
+
+    from {
+
+        opacity:0;
+
+        transform:
+
+        translateY(30px);
+
+    }
+
+
+
+    to {
+
+
+        opacity:1;
+
+
+        transform:
+
+        translateY(0);
+
+
+    }
+
+}
+
+
+
+
+@keyframes logoEnter {
+
+
+    from {
+
+
+        opacity:0;
+
+
+        transform:
+
+        scale(.85)
+
+        translateY(-20px);
+
+
+    }
+
+
+
+    to {
+
+
+        opacity:1;
+
+
+        transform:
+
+        scale(1)
+
+        translateY(0);
+
+
+    }
+
+
+}
+
+
+
+
+/* =========================================
+   Mobile Responsive
+========================================= */
+
+
+
+@media(max-width:480px){
+
+
+
+    .logo-box {
+
+
+        width:140px;
+
+        height:140px;
+
+
+        margin-bottom:20px;
+
+
+    }
+
+
+
+
+    .logo {
+
+
+        width:135px;
+
+        height:135px;
+
+
+    }
+
+
+
+
+    .title-box {
+
+
+        margin-bottom:45px;
+
+
+    }
+
+
+
+
+    .app-subtitle {
+
+
+        font-size:.9rem;
+
+
+        padding:0 15px;
+
+
+    }
+
+
+
+    .login-btn {
+
+
+        height:58px;
+
+
+        font-size:1rem;
+
+
+    }
+
+
+
+}
+
+
+
+
+
+@media(max-height:700px){
+
+
+
+    .logo-box {
+
+
+        width:120px;
+
+        height:120px;
+
+
+    }
+
+
+
+
+    .logo {
+
+
+        width:115px;
+
+        height:115px;
+
+
+    }
+
+
+
+    .title-box {
+
+
+        margin-bottom:25px;
+
+
+    }
+
+
+
+}
+
+
+
+/* جلوگیری از انتخاب ناخواسته */
+
+button,
+img {
+
+
+    user-select:none;
+
+
+    -webkit-user-select:none;
+
+
 }
