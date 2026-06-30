@@ -942,3 +942,16 @@ img {
     align-items: center;
     gap: 100px;
 }
+.logo-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+
+.logo {
+    width: 230px;
+    height: auto;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.35));
+}
