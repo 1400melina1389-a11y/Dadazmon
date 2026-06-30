@@ -842,3 +842,30 @@ img {
     }
 
 }
+.app-title {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #F5D27A;
+    margin-bottom: 12px;
+    text-shadow:
+        0 0 15px rgba(245,210,122,.5);
+}
+
+
+.app-subtitle {
+
+    font-size: 1.15rem;
+
+    color: rgba(255,255,255,.85);
+
+    background: rgba(255,255,255,.08);
+
+    padding: 8px 22px;
+
+    border-radius: 25px;
+
+    backdrop-filter: blur(10px);
+
+    display: inline-block;
+
+}
